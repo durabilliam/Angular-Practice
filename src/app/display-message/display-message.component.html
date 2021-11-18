@@ -1,0 +1,11 @@
+<p>display-message works!</p>
+<button class="btn btn-primary" (click)="onShowMessage()">Display</button>
+<p *ngIf="messageInvisable; else messageVisable"></p>
+<ng-template #messageVisable>
+  <p>Secret Password = Tuna</p>
+</ng-template>
+<div
+  *ngFor="let click of clicks; let i = index"
+  [ngStyle]="{color: i >= 4 ? 'white' : 'black', backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+>{{ click }}</div>
+
